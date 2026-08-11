@@ -1,0 +1,34 @@
+# Dependências
+node_modules/
+dist/
+
+# Ambiente
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+logs/
+src/logs/
+
+# Uploads
+src/uploads/*
+!src/uploads/.gitkeep
+
+# Coverage
+coverage/
+.nyc_output/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Prisma
+# Não ignorar migrations (devem ser versionadas)

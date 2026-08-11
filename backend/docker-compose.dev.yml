@@ -1,0 +1,74 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: ecommerce_postgres_dev
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ecommerce_db
+      POSTGRES_USER: ecommerce_user
+      POSTGRES_PASSWORD: changeme_strong_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_dev_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ecommerce_user -d ecommerce_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - ecommerce_dev_network
+
+  redis:
+    image: redis:7-alpine
+    container_name: ecommerce_redis_dev
+    restart: unless-stopped
+    command: >
+      redis-server
+      --requirepass changeme_redis_password
+      --maxmemory 128mb
+      --maxmemory-policy allkeys-lru
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_dev_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "--no-auth-warning", "-a", "changeme_redis_password", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - ecommerce_dev_network
+
+  redis_test:
+    image: redis:7-alpine
+    container_name: ecommerce_redis_test
+    restart: unless-stopped
+    command: redis-server --maxmemory 64mb --maxmemory-policy allkeys-lru
+    ports:
+      - "6380:6379"
+    networks:
+      - ecommerce_dev_network
+
+  postgres_test:
+    image: postgres:16-alpine
+    container_name: ecommerce_postgres_test
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ecommerce_test_db
+      POSTGRES_USER: ecommerce_user
+      POSTGRES_PASSWORD: changeme_strong_password
+    ports:
+      - "5433:5432"
+    tmpfs:
+      - /var/lib/postgresql/data
+    networks:
+      - ecommerce_dev_network
+
+volumes:
+  postgres_dev_data:
+  redis_dev_data:
+
+networks:
+  ecommerce_dev_network:
+    driver: bridge
