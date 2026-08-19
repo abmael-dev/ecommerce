@@ -57,7 +57,7 @@ export const AccountPage: React.FC = () => {
 
             <div className="flex items-center gap-1.5 text-xs text-emerald-600 dark:text-emerald-400">
               <ShieldCheck className="w-4 h-4" />
-              <span>Sessão Protegida via Servidor</span>
+              <span>Conta Protegida & Segura</span>
             </div>
           </div>
         </CardContent>

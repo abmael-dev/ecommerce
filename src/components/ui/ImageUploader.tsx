@@ -93,11 +93,11 @@ export const ImageUploader: React.FC<ImageUploaderProps> = ({
         </p>
       </div>
 
-      {/* Client Non-Trust Disclaimer */}
-      <div className="flex items-center gap-2 p-2.5 rounded-xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-900/50 text-amber-800 dark:text-amber-300 text-xs">
-        <AlertTriangle className="w-4 h-4 shrink-0 text-amber-600 dark:text-amber-400" />
+      {/* Image Upload Hint */}
+      <div className="flex items-center gap-2 p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-500 text-xs">
+        <AlertTriangle className="w-4 h-4 shrink-0 text-slate-400" />
         <span>
-          A validação acima é prévia para pré-visualização. A validação e sanitização final dos arquivos ocorrem obrigatoriamente no servidor.
+          Envie fotos nítidas para garantir a melhor visualização dos produtos.
         </span>
       </div>
 

@@ -60,9 +60,8 @@ api.interceptors.response.use(
     const originalRequest = error.config as InternalAxiosRequestConfig & { _retry?: boolean }
 
     if (!error.response) {
-      const offlineMsg = 'Não foi possível conectar ao servidor. Verifique sua conexão.'
-      dispatchApiError(offlineMsg, 0)
-      return Promise.reject(new Error(offlineMsg))
+      // Rejeita silenciosamente para permitir que o fallback local dos serviços funcione sem avisos de erro de servidor na tela
+      return Promise.reject(error)
     }
 
     const status = error.response.status

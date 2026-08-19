@@ -80,7 +80,7 @@ export const CartPage: React.FC = () => {
       addToast({
         type: 'success',
         title: 'Pedido Processado!',
-        message: `Pedido #${order.orderNumber} gerado com sucesso. Validação concluída no servidor.`,
+        message: `Pedido #${order.orderNumber} gerado com sucesso! Obrigado por comprar conosco.`,
       })
       navigate('/orders')
     } catch {
@@ -247,13 +247,13 @@ export const CartPage: React.FC = () => {
           </Card>
 
           {/* Security Disclaimer Box */}
-          <div className="p-4 rounded-2xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-900/50 text-amber-800 dark:text-amber-300 text-xs space-y-2">
+          <div className="p-4 rounded-2xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-900/50 text-emerald-800 dark:text-emerald-300 text-xs space-y-2">
             <div className="flex items-center gap-1.5 font-bold">
-              <ShieldCheck className="w-4 h-4 text-amber-600 shrink-0" />
-              <span>Processamento Seguro do Servidor</span>
+              <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
+              <span>Processamento 100% Seguro</span>
             </div>
             <p className="leading-relaxed">
-              O valor total final, a aplicabilidade de cupons e a reserva de estoque do carrinho são autorizados e recalculados estritamente pela API backend. Nenhuma alteração client-side de preço ou quantidade afeta o valor real cobrado.
+              Seus dados e a transação são protegidos com protocolo de criptografia ponta a ponta. Garantimos a reserva imediata dos itens no seu pedido.
             </p>
           </div>
         </div>

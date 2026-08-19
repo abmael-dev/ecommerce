@@ -36,7 +36,7 @@ export const Header: React.FC = () => {
       <div className="bg-slate-900 text-slate-300 text-[11px] py-1 px-4 flex items-center justify-between font-medium">
         <div className="flex items-center gap-1.5 mx-auto sm:mx-0">
           <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
-          <span>Arquitetura Frontend Segura & Desacoplada | Regras de Negócio e Sessão via HttpOnly Server Cookies</span>
+          <span>Compra 100% Segura | Frete Grátis acima de R$ 199 | Até 10x Sem Juros</span>
         </div>
         <div className="hidden sm:flex items-center gap-4 text-slate-400">
           <span>Suporte 24/7</span>

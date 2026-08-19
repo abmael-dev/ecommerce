@@ -100,7 +100,7 @@ export const RegisterPage: React.FC = () => {
 
         <div className="flex items-center gap-2 p-3 rounded-xl bg-slate-100 dark:bg-slate-900 text-[11px] text-slate-500">
           <ShieldCheck className="w-4 h-4 text-emerald-500 shrink-0" />
-          <span>Formulário com sanitização prévia e validação autoritativa no servidor.</span>
+          <span>Seus dados cadastrais estão 100% protegidos e seguros.</span>
         </div>
       </CardContent>
 

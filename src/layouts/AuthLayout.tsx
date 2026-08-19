@@ -22,7 +22,7 @@ export const AuthLayout: React.FC = () => {
 
       <footer className="text-center text-xs text-slate-500 dark:text-slate-400 flex items-center justify-center gap-2">
         <ShieldCheck className="w-4 h-4 text-emerald-500" />
-        <span>Sessão segura por Cookies HttpOnly emitidos pelo servidor.</span>
+        <span>Ambiente 100% Seguro & Protegido</span>
       </footer>
     </div>
   )

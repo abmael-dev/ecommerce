@@ -48,7 +48,7 @@ export const LoginPage: React.FC = () => {
       addToast({
         type: 'success',
         title: 'Bem-vindo de volta!',
-        message: `Sessão autenticada via HttpOnly Cookies.`,
+        message: `Login realizado com sucesso!`,
       })
       navigate(user.role === 'ADMIN' ? '/admin' : from, { replace: true })
     } catch {
@@ -137,7 +137,7 @@ export const LoginPage: React.FC = () => {
 
         <div className="flex items-center gap-2 p-3 rounded-xl bg-slate-100 dark:bg-slate-900 text-[11px] text-slate-500">
           <ShieldCheck className="w-4 h-4 text-emerald-500 shrink-0" />
-          <span>Autenticação baseada em Cookies de Sessão protegidos HttpOnly.</span>
+          <span>Seus dados de login são protegidos com conexão criptografada.</span>
         </div>
       </CardContent>
 

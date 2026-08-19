@@ -146,9 +146,9 @@ export const CartDrawer: React.FC = () => {
                       <span className="font-semibold text-slate-900 dark:text-slate-100">{formatCurrency(total)}</span>
                     </div>
 
-                    <div className="flex items-center gap-1.5 text-[11px] text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/40 p-2 rounded-lg border border-amber-200 dark:border-amber-900/50">
+                    <div className="flex items-center gap-1.5 text-[11px] text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/40 p-2 rounded-lg border border-emerald-200 dark:border-emerald-900/50">
                       <ShieldCheck className="w-3.5 h-3.5 shrink-0" />
-                      <span>Cálculo final de impostos e frete é validado no servidor.</span>
+                      <span>Checkout 100% seguro com criptografia de dados.</span>
                     </div>
                   </div>
 

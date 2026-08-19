@@ -24,7 +24,7 @@ export const Footer: React.FC = () => {
             </div>
             <div>
               <h4 className="font-semibold text-slate-900 dark:text-slate-100 text-xs">Checkout 100% Seguro</h4>
-              <p className="text-[11px] text-slate-500">Cookies HttpOnly & Criptografia</p>
+              <p className="text-[11px] text-slate-500">Criptografia SSL de 256 bits</p>
             </div>
           </div>
 
@@ -43,8 +43,8 @@ export const Footer: React.FC = () => {
               <ShieldCheck className="w-5 h-5" />
             </div>
             <div>
-              <h4 className="font-semibold text-slate-900 dark:text-slate-100 text-xs">Zero-Trust Frontend</h4>
-              <p className="text-[11px] text-slate-500">Regras de negócio no servidor</p>
+              <h4 className="font-semibold text-slate-900 dark:text-slate-100 text-xs">Garantia de Qualidade</h4>
+              <p className="text-[11px] text-slate-500">Produtos 100% originais</p>
             </div>
           </div>
         </div>
@@ -57,7 +57,7 @@ export const Footer: React.FC = () => {
             AURA<span className="text-indigo-600 dark:text-indigo-400">.STORE</span>
           </Link>
           <p className="text-xs text-slate-500 dark:text-slate-400 max-w-sm leading-relaxed">
-            Plataforma moderna de e-commerce focada em alta performance, UX refinada e arquitetura desacoplada com autorização estrita no servidor.
+            Sua loja online definitiva para moda, tênis e acessórios. Os melhores lançamentos com entrega rápida e pagamento seguro.
           </p>
         </div>
 
@@ -80,17 +80,17 @@ export const Footer: React.FC = () => {
         </div>
 
         <div>
-          <h5 className="font-bold text-xs uppercase tracking-wider text-slate-900 dark:text-slate-100 mb-3">Segurança</h5>
+          <h5 className="font-bold text-xs uppercase tracking-wider text-slate-900 dark:text-slate-100 mb-3">Atendimento</h5>
           <ul className="space-y-2 text-xs">
-            <li><span className="text-slate-500">HttpOnly Session Cookies</span></li>
-            <li><span className="text-slate-500">Zod Client-side Schemas</span></li>
-            <li><span className="text-slate-500">Server Validation Primary</span></li>
+            <li><span className="text-slate-500">Central de Ajuda</span></li>
+            <li><span className="text-slate-500">Política de Privacidade</span></li>
+            <li><span className="text-slate-500">Termos de Uso</span></li>
           </ul>
         </div>
       </div>
 
       <div className="border-t border-slate-100 dark:border-slate-900 py-6 text-center text-xs text-slate-500">
-        <p>© 2026 AURA STORE. Todos os direitos reservados. Frontend desacoplado para integração com Node.js API.</p>
+        <p>© 2026 AURA STORE. Todos os direitos reservados.</p>
       </div>
     </footer>
   )
